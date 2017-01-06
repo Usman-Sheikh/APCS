@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>APCS-@ViewBag.Title</title>
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/green.css" id="colors">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="boxed">
+    <div id="wrapper">
+
+        <!-- Top Bar
+        ================================================== -->
+        <div id="top-bar">
+            <div class="container">
+                <!-- Top Bar Menu -->
+                <div class="ten columns">
+                    <ul class="top-bar-menu">
+                        <li><i class="fa fa-phone"></i> 053-xxxxxx</li>
+                        <li><i class="fa fa-envelope"></i> <a href="#">noreplyapcs@gmail.com </a></li>
+                        <li>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- Social Icons -->
+             
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- Header
+        ================================================== -->
+        <div class="container">
+
+            <!-- Logo -->
+            <div class="four columns">
+                <div id="logo">
+                    <h1><a href='@Url.Action("Index", "Store")'><img src="~/images/AB MALL.png" alt="Trizzy" /></a></h1>
+                </div>
+            </div>
+
+            <!-- Additional Menu -->
+            <div class="twelve columns">
+                <div id="additional-menu">
+                    <ul>
+                        <li><a href='@Url.Action("Index", "ShoppingCart")'>Shopping Cart</a></li>
+                       
+                        @*<li><a href='@Url.Action("Login", "Account")'>Login</a></li>*@
+                        @Html.Partial("_LoginPartial")
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Shopping Cart -->
+            
+        </div>
+
+        <!-- Navigation
+        ================================================== -->
+        <div class="container">
+            <div class="sixteen columns">
+
+                <a href="#menu" class="menu-trigger"><i class="fa fa-bars"></i> Menu</a>
+                <nav id="navigation">
+                    <ul class="menu" id="responsive">
+                        <li><a href='@Url.Action("Index", "Store")' class="current homepage" id="current">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Shop</a>
+                          @{Html.RenderAction("Shops", "Store");}
+                        </li>
+
+                        
+
+                        
+
+                        <li class="demo-button">
+                            <a href='@Url.Action("About", "Home")'>About Us</a>
+                        </li>
+
+                        
+
+                        <li class="demo-button">
+                            <a href='@Url.Action("Contact", "Home")'>Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+ @RenderBody()
+        <!-- Footer
+        ================================================== -->
+        <div id="footer">
+            <!-- Container -->
+            <div class="container">
+                <div class="four columns">
+                    <img src="~/images/AB MALL.png" alt="" class="margin-top-10" />
+                    <p class="margin-top-15"></p>
+                </div>
+                <div class="four columns">
+                    <!-- Headline -->
+                    <h3 class="headline footer">Customer Service</h3>
+                    <span class="line"></span>
+                    <div class="clearfix"></div>
+                    <ul class="footer-links">
+                        <li><a href="#">Payment Methods</a></li>
+                        <li><a href="#">Delivery & Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="four columns">
+                    <!-- Headline -->
+                    <h3 class="headline footer">My Account</h3>
+                    <span class="line"></span>
+                    <div class="clearfix"></div>
+                    <ul class="footer-links">
+                        <li><a href='@Url.Action("Index", "ShoppingCart")'>My Cart</a></li>
+                        <li><a href='@Url.Action("Login", "Account")'>Login</a></li>
+                        <li><a href='@Url.Action("Register", "Account")'>Register</a></li>
+                        <li><a href='@Url.Action("Login","Dashboard",new { area="Admin"})'>Admin Login</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- Container / End -->
+        </div>
+        <!-- Footer / End -->
+        <!-- Footer Bottom / Start -->
+        <div id="footer-bottom">
+            <!-- Container -->
+            <div class="container">
+                <div class="eight columns">© Copyright 2017 APCS </div>
+                <div class="eight columns">
+                    <ul class="payment-icons">
+                        <li><img src="~/images/visa.png" alt="" /></li>
+                        <li><img src="~/images/mastercard.png" alt="" /></li>
+                        <li><img src="~/images/skrill.png" alt="" /></li>
+                        <li><img src="~/images/moneybookers.png" alt="" /></li>
+                        <li><img src="~/images/paypal.png" alt="" /></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Container / End -->
+        </div>
+        <!-- Footer Bottom / End -->
+        <!-- Back To Top Button -->
+        <div id="backtotop"><a href="#"></a></div>
+    </div>
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="~/Scripts/jquery-1.11.0.min.js"></script>
+    <script src="~/Scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="~/Scripts/jquery.jpanelmenu.js"></script>
+    <script src="~/Scripts/jquery.themepunch.plugins.min.js"></script>
+    <script src="~/Scripts/jquery.themepunch.revolution.min.js"></script>
+    <script src="~/Scripts/jquery.themepunch.showbizpro.min.js"></script>
+    <script src="~/Scripts/jquery.magnific-popup.min.js"></script>
+    <script src="~/Scripts/hoverIntent.js"></script>
+    <script src="~/Scripts/superfish.js"></script>
+    <script src="~/Scripts/jquery.pureparallax.js"></script>
+    <script src="~/Scripts/jquery.pricefilter.js"></script>
+    <script src="~/Scripts/jquery.selectric.min.js"></script>
+    <script src="~/Scripts/jquery.royalslider.min.js"></script>
+    <script src="~/Scripts/SelectBox.js"></script>
+    <script src="~/Scripts/modernizr.custom.js"></script>
+    <script src="~/Scripts/waypoints.min.js"></script>
+    <script src="~/Scripts/jquery.flexslider-min.js"></script>
+    <script src="~/Scripts/jquery.counterup.min.js"></script>
+    <script src="~/Scripts/jquery.tooltips.min.js"></script>
+    <script src="~/Scripts/jquery.isotope.min.js"></script>
+    <script src="~/Scripts/puregrid.js"></script>
+    <script src="~/Scripts/stacktable.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+
+   
+    @RenderSection("scripts", required: false)
+    
+
+</body>
+</html>

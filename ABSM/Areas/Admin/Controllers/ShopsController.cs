@@ -156,9 +156,9 @@ namespace ABSM.Areas.Admin.Controllers
                 var extension = Path.GetExtension(filename).ToLower();
                 if (extension == ".jpg" || extension == ".png" || extension == ".jpeg")
                 {
-                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images", filename));
+                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images/", filename));
                     doc.SaveAs(path);
-                    shop.ImageUrl = "~/Content/Images" + filename;
+                    shop.ImageUrl = "~/Content/Images/" + filename;
                 }
                 else
                 {
@@ -240,9 +240,9 @@ namespace ABSM.Areas.Admin.Controllers
                 var extension = Path.GetExtension(filename).ToLower();
                 if (extension == ".jpg" || extension == ".png" || extension == ".jpeg")
                 {
-                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images", filename));
+                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images/", filename));
                     doc.SaveAs(path);
-                    shop.ImageUrl = "~/Content/Images" + filename;
+                    shop.ImageUrl = "~/Content/Images/" + filename;
                     db.Entry(shop).State = EntityState.Modified;
                     db.SaveChanges();
                     return RedirectToAction("Index");
@@ -350,9 +350,9 @@ namespace ABSM.Areas.Admin.Controllers
                 var extension = Path.GetExtension(filename).ToLower();
                 if (extension == ".jpg" || extension == ".png" || extension == ".jpeg")
                 {
-                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images", filename));
+                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images/", filename));
                     file.SaveAs(path);
-                    fileupload.ImageUrl = "~/Content/Images" + filename;
+                    fileupload.ImageUrl = "~/Content/Images/" + filename;
                     db.FileUploads.Add(fileupload);
                     db.SaveChanges();
                     return RedirectToAction("Index");

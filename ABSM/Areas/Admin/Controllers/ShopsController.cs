@@ -123,7 +123,7 @@ namespace ABSM.Areas.Admin.Controllers
         public ActionResult Create()
         {
             var Roleid = db.Roles.Where(x => x.Name == "Shop").Select(x=>x.Name);
-            var shopkeepers = db.Users.Where(x => x.Roles.Select(y => y.RoleId).Contains("ac8d7ae9-bf12-4839-ae77-d2e0c267d002"))
+            var shopkeepers = db.Users.Where(x => x.Roles.Select(y => y.RoleId).Contains("50a51e16-011c-4df8-bf2b-00531b1a71cf"))
                        .OrderBy(u => u.UserName).ToList();
 
             var UsersList= new List<ApplicationUser>();
@@ -156,9 +156,9 @@ namespace ABSM.Areas.Admin.Controllers
                 var extension = Path.GetExtension(filename).ToLower();
                 if (extension == ".jpg" || extension == ".png" || extension == ".jpeg")
                 {
-                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images/", filename));
+                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images", filename));
                     doc.SaveAs(path);
-                    shop.ImageUrl = "~/Content/Images/" + filename;
+                    shop.ImageUrl = "~/images/" + filename;
                 }
                 else
                 {
@@ -174,7 +174,7 @@ namespace ABSM.Areas.Admin.Controllers
                 }
             }
             ModelState.AddModelError("", "Please upload image");
-            var shopkeepers = db.Users.Where(x => x.Roles.Select(y => y.RoleId).Contains("ac8d7ae9-bf12-4839-ae77-d2e0c267d002"))
+            var shopkeepers = db.Users.Where(x => x.Roles.Select(y => y.RoleId).Contains("50a51e16-011c-4df8-bf2b-00531b1a71cf"))
                        .OrderBy(u => u.UserName).ToList();
 
             var UsersList = new List<ApplicationUser>();
@@ -205,7 +205,7 @@ namespace ABSM.Areas.Admin.Controllers
                 return HttpNotFound();
             }
 
-            var shopkeepers = db.Users.Where(x => x.Roles.Select(y => y.RoleId).Contains("c3ecfd61-1f5f-495f-90a7-85fc15955264"))
+            var shopkeepers = db.Users.Where(x => x.Roles.Select(y => y.RoleId).Contains("50a51e16-011c-4df8-bf2b-00531b1a71cf"))
                        .OrderBy(u => u.UserName).ToList();
 
             var UsersList = new List<ApplicationUser>();
@@ -240,9 +240,9 @@ namespace ABSM.Areas.Admin.Controllers
                 var extension = Path.GetExtension(filename).ToLower();
                 if (extension == ".jpg" || extension == ".png" || extension == ".jpeg")
                 {
-                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images/", filename));
+                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images", filename));
                     doc.SaveAs(path);
-                    shop.ImageUrl = "~/Content/Images/" + filename;
+                    shop.ImageUrl = "~/images/" + filename;
                     db.Entry(shop).State = EntityState.Modified;
                     db.SaveChanges();
                     return RedirectToAction("Index");
@@ -350,9 +350,9 @@ namespace ABSM.Areas.Admin.Controllers
                 var extension = Path.GetExtension(filename).ToLower();
                 if (extension == ".jpg" || extension == ".png" || extension == ".jpeg")
                 {
-                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images/", filename));
+                    path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images", filename));
                     file.SaveAs(path);
-                    fileupload.ImageUrl = "~/Content/Images/" + filename;
+                    fileupload.ImageUrl = "~/images" + filename;
                     db.FileUploads.Add(fileupload);
                     db.SaveChanges();
                     return RedirectToAction("Index");

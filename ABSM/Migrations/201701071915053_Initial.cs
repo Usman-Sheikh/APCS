@@ -3,7 +3,7 @@ namespace ABSM.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class First : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
@@ -36,8 +36,8 @@ namespace ABSM.Migrations
                         ShopID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ProductID)
-                .ForeignKey("dbo.Categories", t => t.CategoryID, cascadeDelete: false)
-                .ForeignKey("dbo.Shops", t => t.ShopID, cascadeDelete: false)
+                .ForeignKey("dbo.Categories", t => t.CategoryID, cascadeDelete: true)
+                .ForeignKey("dbo.Shops", t => t.ShopID, cascadeDelete: true)
                 .Index(t => t.CategoryID)
                 .Index(t => t.ShopID);
             
@@ -96,6 +96,15 @@ namespace ABSM.Migrations
                         Message = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.ContactID);
+            
+            CreateTable(
+                "dbo.FileUploads",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        ImageUrl = c.String(),
+                    })
+                .PrimaryKey(t => t.ID);
             
             CreateTable(
                 "dbo.OrderDetails",
@@ -237,6 +246,7 @@ namespace ABSM.Migrations
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Orders");
             DropTable("dbo.OrderDetails");
+            DropTable("dbo.FileUploads");
             DropTable("dbo.Contacts");
             DropTable("dbo.Complains");
             DropTable("dbo.Shops");

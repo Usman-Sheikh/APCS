@@ -187,13 +187,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610042226286_First.cs" />
-    <Compile Include="Migrations\201610042226286_First.Designer.cs">
-      <DependentUpon>201610042226286_First.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610161226572_FileUpload added.cs" />
-    <Compile Include="Migrations\201610161226572_FileUpload added.Designer.cs">
-      <DependentUpon>201610161226572_FileUpload added.cs</DependentUpon>
+    <Compile Include="Migrations\201701071915053_Initial.cs" />
+    <Compile Include="Migrations\201701071915053_Initial.Designer.cs">
+      <DependentUpon>201701071915053_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -207,6 +203,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\PriceComplain.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Shop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -632,11 +629,8 @@
     <Content Include="Views\Store\_NewArrivals.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610042226286_First.resx">
-      <DependentUpon>201610042226286_First.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610161226572_FileUpload added.resx">
-      <DependentUpon>201610161226572_FileUpload added.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701071915053_Initial.resx">
+      <DependentUpon>201701071915053_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

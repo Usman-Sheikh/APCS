@@ -51,14 +51,16 @@
             <section class="linking">
 
 
-                <a href="@Url.Action("AddtoCart", "ShoppingCart", new { id = Model.ProductID })" class="button adc">  Add to Cart</a>
+                <a href="@Url.Action("AddtoCart", "ShoppingCart", new { id = Model.ProductID })" class="button adc">  Add to Cart</a>&nbsp;
 
-                <a href="@Url.Action("Index", "Shop", new { id = Model.ShopID })" class="button"> Vsit Shop</a>
+                <a href="@Url.Action("Index", "Shop", new { id = Model.ShopID })" class="button gray"><i class="fa fa-map-marker"></i> Vsit Shop</a>
+           
 
-                <a href="@Url.Action("Index", "Shop", new { id = Model.ShopID })" class="button"> Visit Shop</a>
 
                 <div class="clearfix"></div>
             </section>
+            <a href="@Url.Action("Index", "Complain", new { id = Model.ProductID })" class="button dark"><i class="fa  fa-send"></i> Complain</a>&nbsp;
+
         </div>
     </div>
 </div>

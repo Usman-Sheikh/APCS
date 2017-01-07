@@ -143,3 +143,4 @@ E:\Project\APCS\ABSM\obj\Debug\ABSM.dll
 E:\Project\APCS\ABSM\obj\Debug\ABSM.pdb
 E:\Project\APCS\ABSM\obj\Debug\ABSM.Migrations.Initial.resources
 E:\Project\APCS\ABSM\obj\Debug\ABSM.csproj.GenerateResource.Cache
+E:\Project\APCS\ABSM\obj\Debug\ABSM.Migrations._3rd.resources

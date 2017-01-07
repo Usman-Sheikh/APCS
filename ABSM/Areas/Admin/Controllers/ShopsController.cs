@@ -158,7 +158,7 @@ namespace ABSM.Areas.Admin.Controllers
                 {
                     path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images", filename));
                     doc.SaveAs(path);
-                    shop.ImageUrl = "~/images/" + filename;
+                    shop.ImageUrl = "~/Content/Images" + filename;
                 }
                 else
                 {
@@ -242,7 +242,7 @@ namespace ABSM.Areas.Admin.Controllers
                 {
                     path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images", filename));
                     doc.SaveAs(path);
-                    shop.ImageUrl = "~/images/" + filename;
+                    shop.ImageUrl = "~/Content/Images" + filename;
                     db.Entry(shop).State = EntityState.Modified;
                     db.SaveChanges();
                     return RedirectToAction("Index");
@@ -352,7 +352,7 @@ namespace ABSM.Areas.Admin.Controllers
                 {
                     path = HostingEnvironment.MapPath(Path.Combine("~/Content/Images", filename));
                     file.SaveAs(path);
-                    fileupload.ImageUrl = "~/images" + filename;
+                    fileupload.ImageUrl = "~/Content/Images" + filename;
                     db.FileUploads.Add(fileupload);
                     db.SaveChanges();
                     return RedirectToAction("Index");

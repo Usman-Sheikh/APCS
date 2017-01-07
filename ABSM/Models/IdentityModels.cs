@@ -42,6 +42,8 @@ namespace ABSM.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ABSM.Models.PriceComplain> PriceComplains { get; set; }
     }
 
 

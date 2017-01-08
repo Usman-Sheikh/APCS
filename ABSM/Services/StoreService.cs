@@ -76,5 +76,13 @@ namespace ABSM.Services
         {
             return _db.Shops.Select(S => new SelectListItem { Value = S.ShopID.ToString(), Text = S.Name }).ToList();
         }
+
+
+
+        public IEnumerable<RateList> GetNewRates()
+        {
+            return _db.RateLists.Include("Category").Include("Product").Take(10).OrderByDescending(x => x.UpdatedDate).ToList();
+
+        }
     }
 }

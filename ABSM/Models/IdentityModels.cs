@@ -37,14 +37,16 @@ namespace ABSM.Models
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<FileUpload> FileUploads { get; set; }
+        public DbSet<PriceComplain> PriceComplains { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<RateList> RateLists { get; set; }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
-
-        public System.Data.Entity.DbSet<ABSM.Models.PriceComplain> PriceComplains { get; set; }
     }
+
 
 
 

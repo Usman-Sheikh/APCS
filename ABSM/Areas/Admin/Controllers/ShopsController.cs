@@ -369,6 +369,18 @@ namespace ABSM.Areas.Admin.Controllers
 
         }
 
+
+
+
+        //Price Control
+        public ActionResult PriceComplains()
+        {
+
+            return View(db.PriceComplains.Include(r => r.Shop).Include(r => r.Product).ToList());
+
+        }
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

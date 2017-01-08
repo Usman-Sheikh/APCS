@@ -100,5 +100,15 @@ namespace ABSM.Controllers
             return PartialView("_NewArrivals", products);
         }
 
+
+        public ActionResult NewRates()
+        {
+            var rates = _store.GetNewRates();
+
+            return PartialView("_NewRates", rates);
+        }
+
+
+
     }
 }

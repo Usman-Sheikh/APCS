@@ -211,6 +211,10 @@
     <Compile Include="Migrations\201701082351410_ModifiedGeneralComplain.Designer.cs">
       <DependentUpon>201701082351410_ModifiedGeneralComplain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701091236456_RateModified.cs" />
+    <Compile Include="Migrations\201701091236456_RateModified.Designer.cs">
+      <DependentUpon>201701091236456_RateModified.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CartItem.cs" />
@@ -643,10 +647,8 @@
     <Content Include="Areas\Admin\Views\Cities\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Cities\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shops\PriceComplains.cshtml" />
-    <Content Include="Areas\Admin\Views\Complains\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Complains\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Complains\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Complains\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Complains\Index.cshtml" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
@@ -687,6 +689,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701082351410_ModifiedGeneralComplain.resx">
       <DependentUpon>201701082351410_ModifiedGeneralComplain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701091236456_RateModified.resx">
+      <DependentUpon>201701091236456_RateModified.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

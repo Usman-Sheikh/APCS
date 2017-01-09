@@ -147,3 +147,4 @@ E:\Project\APCS\ABSM\obj\Debug\ABSM.pdb
 E:\Project\APCS\ABSM\obj\Debug\ABSM.csprojResolveAssemblyReference.cache
 E:\Project\APCS\ABSM\obj\Debug\ABSM.Migrations.GeneralComplain.resources
 E:\Project\APCS\ABSM\obj\Debug\ABSM.Migrations.ModifiedGeneralComplain.resources
+E:\Project\APCS\ABSM\obj\Debug\ABSM.Migrations.RateModified.resources

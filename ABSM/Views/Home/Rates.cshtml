@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ABSM.Models.RateList>
+@{
+    ViewBag.Title = "Rates";
+}
+
+<div class="container">
+    <!-- Content
+    ================================================== -->
+    <div class="sixteen columns full-width">
+        <!-- Ordering -->
+        @using (Ajax.BeginForm("Rates", "Home",new AjaxOptions { HttpMethod="GET", InsertionMode=InsertionMode.ReplaceWith, UpdateTargetId= "rateList" }))
+        {
+            <p>
+                Category: @Html.DropDownList("CategoryID", null, htmlAttributes: new { @class = "form-control" })
+                City: @Html.DropDownList("CityID", null, htmlAttributes: new { @class = "form-control" })
+                
+                Product: <input type="text" class="form-control" name="searchString" />
+                <br />
+                <input type="submit" value="Filter" />
+            </p>
+        }
+    </div>
+    <!-- Products -->
+    <div class="products">
+        <!-- Product #1 -->
+
+       <div id="rateList">
+           @Html.Partial("_Rates", Model)
+       </div>
+          
+       
+
+
+        <div class="clearfix"></div>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <nav class="pagination">
+                <ul>
+                    <li><a href="#" class="current-page">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </nav>
+            <nav class="pagination-next-prev full-width">
+                <ul>
+                    <li><a href="#" class="prev"></a></li>
+                    <li><a href="#" class="next"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="margin-top-15"></div>
+@section scripts{
+
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+}

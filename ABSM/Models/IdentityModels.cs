@@ -40,6 +40,7 @@ namespace ABSM.Models
         public DbSet<PriceComplain> PriceComplains { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<RateList> RateLists { get; set; }
+        public DbSet<GeneralComplain> GeneralComplains { get; set; }
 
         public static ApplicationDbContext Create()
         {

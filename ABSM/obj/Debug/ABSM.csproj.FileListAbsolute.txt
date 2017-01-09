@@ -144,3 +144,6 @@ E:\Project\APCS\ABSM\bin\Microsoft.Owin.Security.Twitter.xml
 E:\Project\APCS\ABSM\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\Project\APCS\ABSM\obj\Debug\ABSM.dll
 E:\Project\APCS\ABSM\obj\Debug\ABSM.pdb
+E:\Project\APCS\ABSM\obj\Debug\ABSM.csprojResolveAssemblyReference.cache
+E:\Project\APCS\ABSM\obj\Debug\ABSM.Migrations.GeneralComplain.resources
+E:\Project\APCS\ABSM\obj\Debug\ABSM.Migrations.ModifiedGeneralComplain.resources

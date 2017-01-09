@@ -1,0 +1,26 @@
+﻿@model  IEnumerable<ABSM.Models.RateList>
+
+
+@foreach (var item in Model)
+{
+    <div class="four columns">
+        <figure class="product">
+            <div class="mediaholder">
+                <a href="@Url.Action("Details","Store", new { id = item.ProductID })">
+                    <img alt="" src="@Url.Content(item.Product.ImageUrl)" />
+                    <div class="cover">
+                        <img alt="" src="@Url.Content(item.Product.ImageUrl)" />
+                    </div>
+                </a>
+            </div>
+            <a href="variable-product-page.html">
+                <section>
+                    <span class="product-category">@item.Category.Name</span>
+                    <h5>@item.Product.Name</h5>
+                    <span class="product-price">PKR @item.Price | @item.UpdatedDate.ToString("dd MMM yyyy")</span>
+                </section>
+            </a>
+        </figure>
+    </div>
+}
+

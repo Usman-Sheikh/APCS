@@ -650,6 +650,7 @@
     <Content Include="Areas\Admin\Views\Complains\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Complains\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Complains\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Complains\Status.cshtml" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />

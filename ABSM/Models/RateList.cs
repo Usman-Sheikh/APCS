@@ -22,7 +22,7 @@ namespace ABSM.Models
         [Required, Display(Name = "City")]
         public int CityID { get; set; }
 
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.DateTime), Display(Name = "Updated Date")]
         public DateTime UpdatedDate { get; set; }
 
         //Navigational Propperties

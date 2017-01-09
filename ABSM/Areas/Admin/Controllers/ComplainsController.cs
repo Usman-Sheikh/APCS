@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ABSM.Models;
+using System.Net.Mail;
+using System.Threading.Tasks;
 
 namespace ABSM.Areas.Admin.Controllers
 {
@@ -54,6 +56,44 @@ namespace ABSM.Areas.Admin.Controllers
             }
             return View(generalComplain);
         }
+
+
+        public ActionResult Status(int? id)
+        {
+            if (id == null) {
+                ViewBag.msg = "Select Complain";
+                  }
+            ViewBag.id = id;
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Status(int id, string status, string msg)
+        {
+
+
+            if (id !=0 && status !="" && msg !="" )
+            {
+
+                var complain= db.GeneralComplains.Where(x => x.ID == id).FirstOrDefault();
+                
+                var body = "<p>Complain status: {0}</p><p>Message:</p><p>{1}</p>";
+                var message = new MailMessage();
+                message.To.Add(new MailAddress(complain.Email)); //replace with valid value
+                message.Subject = status;
+                message.Body = string.Format(body,status, msg);
+                message.IsBodyHtml = true;
+                using (var smtp = new SmtpClient())
+                {
+                    await smtp.SendMailAsync(message);
+                    ViewBag.msg = "Email Sent";
+                    return View();
+                }
+            }
+            ViewBag.msg = "Select Status and add description";
+            return View();
+        }
+
 
         // POST: Admin/Complains/Delete/5
         [HttpPost, ActionName("Delete")]

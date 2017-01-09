@@ -6,7 +6,7 @@
 
 <h2>Details</h2>
 
-<div>
+<div class="card-block">
     <h4>General Complain</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -23,7 +23,7 @@
         </dt>
 
         <dd>
-            <img alt="" src="@Url.Content(Model.ImageUrl)" height="200" width="100" />
+            <img alt="" src="@Url.Content(Model.ImageUrl)" height="200" width="500" />
         </dd>
 
         <dt>
@@ -45,6 +45,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    <a href="@Url.Action("Status","Complains", new { id = Model.ID })" class="btn btn-warning waves-effect waves-light"> <i class="fa fa-rocket m-r-5"></i> <span>Send Feedback</span> </a>
+  
     @Html.ActionLink("Back to List", "Index","Complains")
 </p>
